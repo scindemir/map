@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      
+    <div class="map" id="map"></div>
+
+    <script type="template" id="addFormTemplate">
+      <div class="form form-one" data-role="review-form">
+        <div class="form__reviews">
+          <div class="form__reviews-area review-list"></div>
+          <div class="form__reviews-separator"></div>
+        </div>
+        <h3 class="form__title">Отзыв:</h3>
+        <div class="form__content">
+          <input type="text" data-role="review-name" class="form__content-item content--name" placeholder="Укажите ваше имя">
+          <input type="text" data-role="review-place" class="form__content-item content--place" placeholder="Укажите место">
+          <textarea data-role="review-text" class="form__content-item content-review" placeholder="Оставить отзыв"></textarea>
+          <button data-role="review-add" class="form__content-item content--add">Добавить</button>
+          <span class="form-error"></span>
+        </div>
+        <div class="form-triangle"></div>
+      </div>
+    </script>
+    
+  </body>
+</html>
