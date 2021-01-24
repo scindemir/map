@@ -23,7 +23,7 @@ function createServer() {
 
   http
     .createServer(async(req, res) => {
-      res.setHeader('content-type', "application/json");
+      res.setHeader('content-type', 'application/json');
 
       console.log('>', req.method, req.url);
 
@@ -39,15 +39,15 @@ function createServer() {
           end(res, storage.getCoords());
         } else if (req.url === '/add') {
           storage.add(body);
-          end(res, {ok: true});
+          end(res, { ok: true });
         } else if (req.url === '/list') {
           end(res, storage.getByCoords(body.coords));
         } else {
-          end (res, {});
+          end(res, {});
         }
       } catch (e) {
         end(res, { error: { message: e.message }}, 500);
       }
     })
-    .listen(8080);
+    .listen(8181);
 }

@@ -12,9 +12,8 @@ class Storage {
     }
   }
 
-
   validateCoords(coords) {
-    if (!Array.isArray(coords) || coords.length !==2) {
+    if (!Array.isArray(coords) || coords.length !== 2) {
       throw new Error('Invalid coords data');
     }
   }
@@ -52,7 +51,7 @@ class Storage {
   }
 
   getByCoords(coords) {
-    this.validaCoords(coords);
+    this.validateCoords(coords);
     const index = this.getIndex(coords);
     return this.data[index] || [];
   }
