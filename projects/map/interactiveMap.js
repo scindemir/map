@@ -29,13 +29,13 @@ export default class InteractiveMap {
 
   initMap() {
     this.clusterer = new ymaps.Clusterer({
-      groupByCoordinate: true,
+      groupByCoordinates: true,
       clusterDisableClickZoom: true,
-      clusterOpenBalloonCLick: false,
+      clusterOpenBalloonOnClick: false,
     });
     this.clusterer.events.add('click', (e) => {
       const coords = e.get('target').geometry.getCoordinates();
-      this.onclick(coords);
+      this.onClick(coords);
     });
     this.map = new ymaps.Map(this.ImageBitmapRenderingContext, {
       center: [55.748677, 37.587018],
